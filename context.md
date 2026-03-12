@@ -1,8 +1,7 @@
 # Descripción del proyecto.
 
 ### 1. Problema
-Obtener todos 
-Descripción breve del problema que se quiere resolver.
+Obtener todos los kmers de una secuencia de ADN brindada por el usuario. El valor k también es un input.
 
 Ejemplo:
 
