@@ -21,13 +21,33 @@ else:
    
 # 5. Recorrer la secuencia con una ventana de tamaño k.
  else:
-
+    
     for i in range(len(seq) - k + 1):
 
     # 6. Extraer el k-mer de la posición actual.
      kmer = seq[i:i+k]
+     gc_count = kmer.count('G') + kmer.count('C')
+     
+     # 7. Determinar, con base en el conteo de GC, cuál es el mejor k-mer encontrado hasta el momento.
+     # Las variables best_kmer, best_gc_count y posicion se inicializan con los datos del primer k-mer.
+     # Dichas variables solo se actualizan si el contenido de GC de futuros kmers es mayor que el valor actual de best_gc_count.
 
-    # 7. Mostrar el k-mer.
-     print(kmer)
-     print(f'Posición {i} -> {kmer}')
+     if i == 0:
+        best_kmer = kmer
+        best_gc_count = gc_count
+        posicion = 0
 
+     else:
+        if gc_count > best_gc_count:
+            best_kmer = kmer
+            best_gc_count = gc_count 
+            posicion = i
+
+    # 8. Mostrar el k-mer.
+     print(f'kmer={kmer} GC={gc_count}')
+     print(f'Best so far → {best_kmer} (GC={best_gc_count})\n')
+
+    # 9. Al finalizar el recorrido, mostrar el mejor k-mer encontrado, su posición y su conteo de GC.
+    print(f'Final best k-mer: {best_kmer}')
+    print(f'Position: {posicion}')
+    print(f'GC count: {best_gc_count}')
