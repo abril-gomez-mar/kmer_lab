@@ -6,16 +6,16 @@ seq = input('DNA: ').upper()
 # 2. Leer el valor de k.
 k = int(input(f'Introduzca el valor de k: '))
 
-# 3. Revisar, antes de realizar el análisis, que la secuencia no esté vacía.
-if not seq:
-    print(f'No se introdujo ninguna secuencia. Intente de nuevo.')
+# 3. Revisar, antes de realizar el análisis, que la secuencia no esté vacía y que el valor de k sea un número positivo.
+if not seq or k <= 0:
+    print(f'La secuencia está vacía o el valor de k no es válido. Intente de nuevo.\n')
     print(f'No puede mostrarse ninguna posición.') 
 
 else:    
 
 # 4.  Validar que k no rebase la longitud de la secuencia.
  if len(seq) < k: 
-    print(f'Su secuencia es demasiado corta, dado el valor seleccionado de k.')
+    print(f'Su secuencia es demasiado corta, dado el valor seleccionado de k.\n')
     print(f'No puede mostrarse ninguna posición.')
 
    
@@ -43,11 +43,15 @@ else:
             best_gc_count = gc_count 
             posicion = i
 
-    # 8. Mostrar el k-mer.
-     print(f'kmer={kmer} GC={gc_count}')
-     print(f'Best so far → {best_kmer} (GC={best_gc_count})\n')
+    # 8. Mostrar la secuencia original de DNA.
+     print(seq)
 
-    # 9. Al finalizar el recorrido, mostrar el mejor k-mer encontrado, su posición y su conteo de GC.
+     # 9. Señalizar, mediante '^', los nucleótidos presentes en el kmer actual. Mostrar el k-mer y su conteo de GC. 
+     # También se visualiza el kmer con la mejor puntuación provisional de GC. 
+     linea = ' ' * i + '^' * k
+     print(f'{linea}  Best so far → {best_kmer} (GC={best_gc_count})\n')
+
+    # 10. Al finalizar el recorrido, mostrar el mejor k-mer encontrado, su posición y su conteo de GC.
     print(f'Final best k-mer: {best_kmer}')
     print(f'Position: {posicion}')
     print(f'GC count: {best_gc_count}')
