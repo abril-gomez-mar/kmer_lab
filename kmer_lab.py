@@ -46,10 +46,11 @@ else:
     # 8. Mostrar la secuencia original de DNA.
      print(seq)
 
-     # 9. Señalizar, mediante '^', los nucleótidos presentes en el kmer actual. Mostrar el k-mer y su conteo de GC. 
-     # También se visualiza el kmer con la mejor puntuación provisional de GC. 
+     # 9. Señalizar, mediante '^', los nucleótidos presentes en el kmer actual. También se muestr el kmer actual y su conteo de GC.
+     # El segundo print arroja el kmer con la mejor puntuación provisional de GC. 
      linea = ' ' * i + '^' * k
-     print(f'{linea}  Best so far → {best_kmer} (GC={best_gc_count})\n')
+     print(f'{linea} kmer={kmer} GC={gc_count}') 
+     print(f'Best so far → {best_kmer} GC={best_gc_count}\n')
 
     # 10. Al finalizar el recorrido, mostrar el mejor k-mer encontrado, su posición y su conteo de GC.
     print(f'Final best k-mer: {best_kmer}')
