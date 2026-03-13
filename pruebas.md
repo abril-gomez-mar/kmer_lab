@@ -9,6 +9,8 @@
 |  DNA: ATGCG | ATG TGC GCG | 
 | k: 3 | Posición 0 → ATG Posición 1 → TGC Posición 2 → GCG |
 
+Este caso contempla que se introduce una secuencia de la cual pueden extraerse numerosos kmers.
+
  - Resultados
   ```
 ATG
@@ -28,6 +30,8 @@ Posición 2 -> GCG
 |  DNA: ATG | ATG |
 | k: 3 | Posición 0 → ATG |
 
+Este caso prevé que se introduce una secuencia asociada a un solo kmer.
+
  - Resultados
   ```
 ATG
@@ -43,6 +47,8 @@ Posición 0 -> ATG
 |  DNA: AT | Su secuencia es demasiado corta, dado el valor seleccionado de k. |
 | k: 3 | No puede mostrarse ninguna posición. | 
 
+Este caso asume que se escogió una secuencia de la cual no puede extraerse ningún kmer, dado el valor seleccionado para k.
+
  - Resultados
   ```
 Su secuencia es demasiado corta, dado el valor seleccionado de k.
@@ -57,6 +63,8 @@ No puede mostrarse ninguna posición.
 |---|---|
 |  DNA: | No se introdujo ninguna secuencia. Intente de nuevo. |
 | k: 3 | No puede mostrarse ninguna posición. |
+
+Este caso presume que el usuario no introdujo ninguna secuencia, así que no puede aislarse ningún kmer.
 
  - Resultados
   ```
@@ -75,6 +83,8 @@ No puede mostrarse ninguna posición.
 Entradas
 DNA: ATGCG
 k: 3
+
+Este caso contempla que se introduce una secuencia de la cual pueden aislarse numerosos kmers.
 
 Salidas
 ```
@@ -117,6 +127,8 @@ Entradas
 DNA: ATG
 k: 3
 
+Este caso se presentaría si se introduce una secuencia asociada a un solo kmer.
+
 Salidas
 ```
 kmer=ATG GC=1
@@ -146,6 +158,8 @@ GC count: 1
 |  DNA: AT  | Su secuencia es demasiado corta, dado el valor seleccionado de k. |
 | k: 3 | No puede mostrarse ninguna posición. | 
 
+Este caso asume que se escogió una secuencia de la cual no puede extraerse ningún kmer, considerando el valor seleccionado para k.
+
  - Resultados
   ```
 Su secuencia es demasiado corta, dado el valor seleccionado de k.
@@ -161,6 +175,8 @@ No puede mostrarse ninguna posición.
 |  DNA: | No se introdujo ninguna secuencia. Intente de nuevo. |
 | k:3 | No puede mostrarse ninguna posición. |
 
+Este caso presume que el usuario no introdujo ninguna secuencia, así que no puede identificarse ningún kmer.
+
  - Resultados
   ```
 No se introdujo ninguna secuencia. Intente de nuevo.
@@ -169,6 +185,7 @@ No puede mostrarse ninguna posición.
 
  - ¿Coincide con la salida esperada? Sí.
 
+<br>
 
 ## **Tercer programa: visualización de ventana deslizante**
 
@@ -177,6 +194,8 @@ No puede mostrarse ninguna posición.
 Entradas
 DNA: ATGCG
 k: 3
+
+Este caso contempla que se introduce una secuencia de la cual pueden aislarse numerosos kmers.
 
 Salidas
 ```
@@ -227,6 +246,8 @@ Entradas
 DNA: ATG
 k: 3
 
+Este caso se suscitaría si se introduce una secuencia asociada a un solo kmer.
+
 Salidas
 ```
 ATG
@@ -258,6 +279,8 @@ GC count: 1
 |  DNA: AT  | Su secuencia es demasiado corta, dado el valor seleccionado de k. |
 | k: 3 | No puede mostrarse ninguna posición. | 
 
+Este caso asume que se escogió una secuencia de la cual no puede extraerse ningún kmer, teniendo en mente el valor seleccionado para k.
+
  - Resultados
   ```
 Su secuencia es demasiado corta, dado el valor seleccionado de k.
@@ -273,6 +296,8 @@ No puede mostrarse ninguna posición.
 |---|---|
 |  DNA: | La secuencia está vacía o el valor de k no es válido. Intente de nuevo. |
 | k:3 | No puede mostrarse ninguna posición. |
+
+Este caso se manifestaría si el usuario no introduce ninguna secuencia de DNA.
 
  - Resultados
   ```
