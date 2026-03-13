@@ -47,7 +47,7 @@ Obtener, dada una secuencia y un valor de k proporcionados por el usuario, los k
 ## 6. Análisis del problema
 Para saber cuáles son los kmers de una secuencia, es menester resguardar los inputs y luego leer fragmentos de la cadena mediante un ciclo for. 
 Por cada iteración, se aislará un kmer y su contenido de GC será calculado. Este parámetro, al igual que la posición y secuencia del kmer, deben resguardarse para el primer kmer.
-Aquel total de GC será equivalente al mejor valor provisional de guanina y citosina. El valor de esta última variable, así como los valores de los otros dos parámetros citados, podrá actualizarse conforme se extraigan más kmers y se determine su contenido de C y G.
+Aquel total de GC será equivalente al mejor valor provisional de guanina y citosina. El valor de esta última variable y los valores de los otros dos parámetros citados podrán actualizarse conforme se extraigan más kmers y se determine su contenido de C y G.
 
 Para que el usuario vea cómo va avanzando el programa, debe emplearse una ventana deslizante que señalice cuáles nucleótidos de la secuencia original constituyen el kmer actual, así como el valor correspondiente de GC.
 Asimismo, es necesario puntualizar cuál, hasta ahora, ha sido el kmer con el mayor contenido de GC. Al final, debe indicarse cuál fue el kmer con mayor presencia de GC.
@@ -68,3 +68,4 @@ Asimismo, es necesario puntualizar cuál, hasta ahora, ha sido el kmer con el ma
 9. Si el k-mer actual tiene mayor contenido GC, actualizar el mejor resultado.
 10. Mostrar el mensaje Best so far con el mejor k-mer registrado hasta ese momento.
 11. Al final, mostrar el mejor k-mer, su posición y su contenido GC.
+
